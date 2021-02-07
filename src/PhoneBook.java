@@ -1,18 +1,23 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PhoneBook {
     private HashMap<String, List<String>> mapPhoneBook = new HashMap<>();
     private List<String> phoneNumbers;
 
-    public HashMap<String, List<String>> getMapPhoneBook() {
+    public HashMap<String, List<String>> get() {
         return mapPhoneBook;
     }
 
-    public List<String> get(String lastName) {
-        return mapPhoneBook.get(lastName);
+    public HashMap<String, List<String>> get(String lastName) {
+        HashMap<String, List<String>> temp = new HashMap<>();
+        for (Map.Entry<String, List<String>> listEntry : mapPhoneBook.entrySet()) {
+            if(listEntry.getKey().equals(lastName)) {
+                temp.put(listEntry.getKey(),listEntry.getValue());
+            }
+        }
+        return temp;
     }
+
 
     public void add(String lastName, String phoneNumber) {
         if (!mapPhoneBook.containsKey(lastName)) {

@@ -22,10 +22,12 @@ public class Main {
         phoneBook.add("Иванов", "8-777-999-99-77");
         phoneBook.add("Сидоров", "8-333-999-99-66");
         phoneBook.add("Петров", "8-555-999-99-55");
-        System.out.println("a) Мой get:");
+        System.out.println("a) Метод get(String key):");
         System.out.println(phoneBook.get("Иванов"));
-        System.out.println("\nb) Стандартный get :");
-        System.out.println(phoneBook.getMapPhoneBook());
+        System.out.println(phoneBook.get("Петров"));
+        System.out.println(phoneBook.get("Сидоров"));
+        System.out.println("\nb) Метод get():");
+        System.out.println(phoneBook.get());
         System.out.println(" \n-----КОНЕЦ-----\n");
 
     }
