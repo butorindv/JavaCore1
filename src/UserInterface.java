@@ -1,5 +1,7 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -7,6 +9,7 @@ public class UserInterface {
     }
 
     public void runTerminal() throws IOException {
+        RepositoryDB repositoryDB = new RepositoryDB();
         ParseMethods.initStringJsonCityList();
         ParseMethods.cityKeysList();
         String tempCityName;
@@ -14,16 +17,19 @@ public class UserInterface {
         Scanner sc = new Scanner(System.in);
         try {
             while (true) {
-                System.out.println("Введите:\n1 - Узнать погоду;\n2 - Выйти из программы.");
+                System.out.println("Введите:\n1 - Узнать погоду;\n2 - Посмотреть базу данных\n3 - Выйти из программы.");
                 switch (sc.nextInt()) {
                     case 1:
                         break;
                     case 2:
+                        repositoryDB.showDateBase();
+                        continue;
+                    case 3:
                         System.out.println("Выход из программы .......");
                         sc.close();
                         System.exit(0);
                     default:
-                        System.out.println("Не верный ввод!");
+                        System.out.println("Неверный ввод!");
                         continue;
                 }
                 while (true) {
@@ -34,6 +40,8 @@ public class UserInterface {
                         continue;
                     } else
                         ParseMethods.voidInfo(ParseMethods.listWeatherResponse(tempCityName));
+
+                    repositoryDB.addToDB(ParseMethods.listWeatherResponse(tempCityName));
                     break;
                 }
                 System.out.println("Хотите продолжить?");
