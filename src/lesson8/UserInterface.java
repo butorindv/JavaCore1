@@ -1,7 +1,7 @@
+package lesson8;
+
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
