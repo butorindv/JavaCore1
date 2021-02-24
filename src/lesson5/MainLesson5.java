@@ -1,8 +1,9 @@
+package lesson5;
+
 import java.io.*;
-import java.nio.CharBuffer;
 import java.util.Arrays;
 
-public class Main {
+public class MainLesson5 {
 
     public static void main(String[] args) throws IOException {
         System.out.println("---Домашняя работа №5---\n");
