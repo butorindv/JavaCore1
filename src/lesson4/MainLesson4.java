@@ -1,6 +1,8 @@
+package lesson4;
+
 import java.util.*;
 
-public class Main {
+public class MainLesson4 {
 
     public static void main(String[] args) {
         System.out.println(" ---Задание 1---");
