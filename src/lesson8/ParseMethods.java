@@ -1,4 +1,4 @@
-package lesson7;
+package lesson8;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;

@@ -1,8 +1,7 @@
+package lesson9;
+
 import java.util.*;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class HomeWork9 {
 
@@ -51,7 +50,7 @@ public class HomeWork9 {
     }
 
     //Задал тип String, что бы в консоль выводил только имена студентов без списка курсов
-//    public static List<Student> inquisitive(List<Student> students) { //Так будет со списком курсов
+//    public static List<lesson9.Student> inquisitive(List<lesson9.Student> students) { //Так будет со списком курсов
     public static List<String> inquisitive(List<Student> students) { //Так просто имена
 
         return students.stream()
@@ -66,7 +65,7 @@ public class HomeWork9 {
                 .collect(Collectors.toList());
     }
 
-    //То же самое на счет <String>, а не <Student>. Сделал, что бы только имена отображались
+    //То же самое на счет <String>, а не <lesson9.Student>. Сделал, что бы только имена отображались
     public static List<String> studentsThisCourse(List<Student> students, Course course) {
         return students.stream()
                 .filter(a -> a.getAllCourses().stream().anyMatch(course1 -> course1.equals(course)))

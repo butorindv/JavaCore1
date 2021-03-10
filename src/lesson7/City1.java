@@ -1,3 +1,4 @@
+
 package lesson7;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
@@ -5,16 +6,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class City {
+public class City1 {
     private String name;
     private String key;
 
-    public City(String name, String key) {
+    public City1(String name, String key) {
         this.name = name;
         this.key = key;
     }
 
-    public City() {
+    public City1() {
     }
 
     @JsonGetter("EnglishName")

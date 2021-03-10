@@ -1,11 +1,13 @@
-package lesson7;
+package lesson8;
+
+import lesson8.UserInterface;
 
 import java.io.IOException;
 
-public class MainLesson7 {
+public class MainLesson8 {
 
     public static void main(String[] args) throws IOException {
-        lesson7.UserInterface1 userInterface = new lesson7.UserInterface1();
+        UserInterface userInterface = new UserInterface();
         userInterface.runTerminal();
 
     }
