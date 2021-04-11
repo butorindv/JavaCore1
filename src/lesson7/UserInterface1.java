@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class UserInterface {
-    public UserInterface() {
+public class UserInterface1 {
+    public UserInterface1() {
     }
 
     public void runTerminal() throws IOException {
-        ParseMethods.initStringJsonCityList();
-        ParseMethods.cityKeysList();
+        ParseMethods1.initStringJsonCityList();
+        ParseMethods1.cityKeysList();
         String tempCityName;
         String tempCityKey;
         Scanner sc = new Scanner(System.in);
@@ -31,11 +31,11 @@ public class UserInterface {
                 while (true) {
                     System.out.println("Введите название города на английском!");
                     tempCityName = sc.next();
-                    tempCityKey = ParseMethods.searchKey(tempCityName);
+                    tempCityKey = ParseMethods1.searchKey(tempCityName);
                     if (tempCityKey == null) {
                         continue;
                     } else
-                        ParseMethods.voidInfo(ParseMethods.listWeatherResponse(tempCityName));
+                        ParseMethods1.voidInfo(ParseMethods1.listWeatherResponse(tempCityName));
                     break;
                 }
                 System.out.println("Хотите продолжить?");

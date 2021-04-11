@@ -1,10 +1,11 @@
+
 package lesson7;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class WeatherResponse {
+public class WeatherResponse1 {
     private String date;
     private String temperature;
     private String text;
@@ -27,7 +28,7 @@ public class WeatherResponse {
         this.cityKey = cityKey;
     }
 
-    public WeatherResponse(String date, String temperature, String text, String cityName, String cityKey) {
+    public WeatherResponse1(String date, String temperature, String text, String cityName, String cityKey) {
         this.date = date;
         this.temperature = temperature;
         this.text = text;
@@ -35,7 +36,7 @@ public class WeatherResponse {
         this.cityKey = cityKey;
     }
 
-    public WeatherResponse() {
+    public WeatherResponse1() {
     }
 
     public String getDate() {
